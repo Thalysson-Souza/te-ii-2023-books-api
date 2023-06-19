@@ -7,7 +7,7 @@ import {
   ValidateNested
 } from 'class-validator';
 import { PessoaDto } from 'src/pessoa/pessoa.dto';
-import { Type } from 'class-transformer';
+import { Transform, Type } from 'class-transformer';
 
 export class FuncionarioDto {
   @IsUUID()
@@ -16,6 +16,9 @@ export class FuncionarioDto {
 
   @IsNumber()
   @IsNotEmpty()
+  @Transform(({ value }) => {
+    return Number(value);
+  })
   salario: number;
 
   @IsString()

@@ -22,9 +22,11 @@ export class PessoaDto {
   cpf: string;
 
   @IsDateString()
+  @IsNotEmpty()
   dataNascimento?: Date | string;
 
   @IsEnum(GeneroEnum)
+  @IsNotEmpty()
   genero?: GeneroEnum;
 
   @IsString()

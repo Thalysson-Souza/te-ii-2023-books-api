@@ -22,7 +22,7 @@ export class AnimalEntity {
   dataNascimento: Date;
 
   @Column()
-  descricao: string;
+  descricao?: string;
 
   @Column({
     type: 'enum',

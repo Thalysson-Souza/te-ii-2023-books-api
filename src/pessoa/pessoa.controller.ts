@@ -31,7 +31,7 @@ export class PessoaController {
   }
 
   @Post()
-  create(@Body() @Param() dto: PessoaDto) {
+  create(@Body() dto: PessoaDto) {
     return this.pessoaService.create(dto);
   }
 

@@ -31,12 +31,14 @@ export class AtendimentoService {
 
   async remove(id: string) {
     const findById = await this.findById(id);
+    this.validateIsPermitDelete(findById)
     await this.atendimentoEntity.remove(findById);
     return { ...findById, id };
   }
 
   async create(dto: AtendimentoDto) {
     this.validate(dto);
+    this.validateValor(dto);
     const newAutor = this.atendimentoEntity.create(dto);
     return this.atendimentoEntity.save(newAutor);
   }
@@ -44,14 +46,38 @@ export class AtendimentoService {
   async update(dto: AtendimentoDto) {
     await this.findById(dto.id);
     this.validate(dto);
+    this.validateValor(dto);
     return this.atendimentoEntity.save(dto);
   }
 
   validate(dto: AtendimentoDto) {
     if (new Date().getTime() < new Date(dto.data).getTime()) {
       throw new BadRequestException(
-        'A data de atendimento da pessoa não pode ser menor que a data atual',
+        'A data de atendimento do animal não pode ser maior que a data atual',
       );
     }
   }
+
+  validateValor(dto: AtendimentoDto) {
+    if (typeof dto.valor !== 'number') {
+      throw new BadRequestException(
+        'Valor inválido.',
+      );
+    }
+    if (dto.valor < 0) {
+      throw new BadRequestException(
+        'Valor não pode ser negativo.',
+      );
+    }
+  }
+
+  validateIsPermitDelete(dto: AtendimentoEntity) {
+    if (dto.valor > 0 || dto.pago === true) {
+      throw new BadRequestException(
+        'Só é possível deletar atendimentos com valor igual a R$0,00 e não pago.',
+      );
+    }
+  }
+
+
 }

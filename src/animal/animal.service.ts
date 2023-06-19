@@ -37,6 +37,7 @@ export class AnimalService {
 
   async create(dto: AnimalDto) {
     this.validate(dto);
+    this.validateNome(dto);
     const newAutor = this.animalEntity.create(dto);
     return this.animalEntity.save(newAutor);
   }
@@ -44,14 +45,24 @@ export class AnimalService {
   async update(dto: AnimalDto) {
     await this.findById(dto.id);
     this.validate(dto);
+    this.validateNome(dto);
     return this.animalEntity.save(dto);
   }
 
   validate(dto: AnimalDto) {
     if (new Date().getTime() < new Date(dto.dataNascimento).getTime()) {
       throw new BadRequestException(
-        'A data de nascimento da pessoa não pode ser menor que a data atual',
+        'A data de nascimento do animal não pode ser maior que a data atual',
       );
     }
   }
+
+  validateNome(dto: AnimalDto) {
+    if (dto.nome.toUpperCase().includes('TESTE')) {
+      throw new BadRequestException(
+        'Nome não pode conter a palavra: TESTE',
+      );
+    }
+  }
+
 }
