@@ -6,13 +6,15 @@ import { dataSourceOptions } from 'db/data-source';
 import { PessoaModule } from './pessoa/pessoa.module';
 import { FuncionarioModule } from './funcionario/funcionario.module';
 import { AnimalModule } from './animal/animal.module';
+import { AtendimentoModule } from './atendimento/atendimento.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(dataSourceOptions),
     PessoaModule,
     FuncionarioModule,
-    AnimalModule
+    AnimalModule,
+    AtendimentoModule
   ],
   controllers: [AppController],
   providers: [AppService],

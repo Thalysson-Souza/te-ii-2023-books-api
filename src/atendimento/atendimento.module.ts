@@ -11,4 +11,4 @@ import { AtendimentoService } from './atendimento.service';
   controllers: [AtendimentoController],
   providers: [AtendimentoService]
 })
-export class AnimalModule { }
+export class AtendimentoModule { }

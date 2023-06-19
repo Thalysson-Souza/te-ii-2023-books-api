@@ -11,7 +11,7 @@ import { AnimalService } from './animal.service';
 import { AnimalEntity } from './animal.entity';
 import { AnimalDto } from './animal.dto';
 
-@Controller('pessoas')
+@Controller('animais')
 export class AnimalController {
   constructor(private animalService: AnimalService) { }
 
