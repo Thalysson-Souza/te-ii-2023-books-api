@@ -372,6 +372,34 @@
 					"response": []
 				},
 				{
+					"name": "1ª- Salário inválido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"salario\": 0,\r\n    \"funcao\": \"recepcao 2\",\r\n    \"pessoa\": {\r\n        \"id\": \"eb67e906-b249-4807-9f48-062afb1d587d\",\r\n        \"nome\": \"Thalysson de Souza Guedin\",\r\n        \"cpf\": \"226.819.381-04\",\r\n        \"dataNascimento\": \"1999-12-22\",\r\n        \"genero\": \"M\",\r\n        \"telefone\": \"(48)3011-8266\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/funcionarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Listar Funcionarios",
 					"request": {
 						"method": "GET",

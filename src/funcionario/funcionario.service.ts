@@ -36,22 +36,22 @@ export class FuncionarioService {
   }
 
   async create(dto: FuncionarioDto) {
-    // this.validate(dto);
+    this.validateSalario(dto);
     const newAutor = this.funcionarioEntity.create(dto);
     return this.funcionarioEntity.save(newAutor);
   }
 
   async update(dto: FuncionarioDto) {
     await this.findById(dto.id);
-    // this.validate(dto);
+    this.validateSalario(dto);
     return this.funcionarioEntity.save(dto);
   }
 
-  // validate(dto: FuncionarioDto) {
-  //   if (new Date().getTime() < new Date(dto.dataNascimento).getTime()) {
-  //     throw new BadRequestException(
-  //       'A data de nascimento da pessoa não pode ser menor que a data atual',
-  //     );
-  //   }
-  // }
+  validateSalario(dto: FuncionarioDto) {
+    if (dto.salario <= 0) {
+      throw new BadRequestException(
+        'Salário não pode ser menor ou igual a 0 (Zero).',
+      );
+    }
+  }
 }
