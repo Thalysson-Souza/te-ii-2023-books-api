@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"Pitolomeu\",\r\n    \"dataNascimento\": \"1999-12-20\",\r\n    \"descricao\": \"vacinado\",\r\n    \"genero\": \"M\"\r\n}",
+							"raw": "{\r\n    \"nome\": \"Pitolomeu\",\r\n    \"dataNascimento\": \"1999-12-20\",\r\n    \"descricao\": \"vacinado\",\r\n    \"genero\": \"M\",\r\n    \"pessoa\": {\r\n        \"id\":\"eb67e906-b249-4807-9f48-062afb1d587d\",\r\n        \"nome\": \"Thalysson de Souza Guedin\",\r\n        \"cpf\": \"226.819.381-04\",\r\n        \"dataNascimento\": \"1999-12-22\",\r\n        \"genero\": \"M\",\r\n        \"telefone\": \"(48)3011-8266\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -118,7 +118,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/animais/dcac72ae-9b96-434b-bfd2-e9d6d01aa330",
+							"raw": "http://localhost:3000/animais/098ab3ad-1359-483a-b69a-f87c6b94f2e5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -126,7 +126,7 @@
 							"port": "3000",
 							"path": [
 								"animais",
-								"dcac72ae-9b96-434b-bfd2-e9d6d01aa330"
+								"098ab3ad-1359-483a-b69a-f87c6b94f2e5"
 							]
 						}
 					},
@@ -138,46 +138,24 @@
 						"method": "PUT",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "nome",
-									"value": "Pitolomeu",
-									"type": "text"
-								},
-								{
-									"key": "dataNascimento",
-									"value": "1999-12-20",
-									"type": "text"
-								},
-								{
-									"key": "descricao",
-									"value": "vacinado",
-									"type": "text"
-								},
-								{
-									"key": "genero",
-									"value": "M",
-									"type": "text"
-								},
-								{
-									"key": "id",
-									"value": "aa581ab9-8dbf-41bf-b540-ea01ee2190c7",
-									"type": "text",
-									"disabled": true
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Pitolomeu 2\",\r\n    \"dataNascimento\": \"1999-12-20\",\r\n    \"descricao\": \"vacinado\",\r\n    \"genero\": \"M\",\r\n    \"pessoa\": {\r\n        \"id\":\"eb67e906-b249-4807-9f48-062afb1d587d\",\r\n        \"nome\": \"Thalysson de Souza Guedin\",\r\n        \"cpf\": \"226.819.381-04\",\r\n        \"dataNascimento\": \"1999-12-22\",\r\n        \"genero\": \"M\",\r\n        \"telefone\": \"(48)3011-8266\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
+							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/animal/{id}",
+							"raw": "http://localhost:3000/animais/79bc5822-1f26-42c8-9912-389d2b51611d",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"animal",
-								"{id}"
+								"animais",
+								"79bc5822-1f26-42c8-9912-389d2b51611d"
 							]
 						}
 					},
@@ -195,7 +173,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n     \"data\": \"1999-12-20 13:00\",\r\n    \"valor\": 0,\r\n    \"pago\": false\r\n}",
+							"raw": "{\r\n    \"data\": \"1999-12-20 13:00\",\r\n    \"valor\": 0,\r\n    \"pago\": false,\r\n    \"funcionario\" :{\r\n        \"id\": \"7922bc0d-d2db-46ba-ab6b-ebd5e774aa30\",\r\n        \"salario\": \"1500\",\r\n        \"funcao\": \"recepcao\",\r\n        \"pessoa\": {\r\n            \"id\": \"eb67e906-b249-4807-9f48-062afb1d587d\",\r\n            \"nome\": \"Thalysson de Souza Guedin\",\r\n            \"dataNascimento\": \"1999-12-22\",\r\n            \"cpf\": \"226.819.381-04\",\r\n            \"genero\": \"M\",\r\n            \"telefone\": \"(48)3011-8266\"\r\n        }\r\n    },\r\n    \"animal\": {\r\n        \"id\": \"79bc5822-1f26-42c8-9912-389d2b51611d\",\r\n        \"nome\": \"Pitolomeu\",\r\n        \"dataNascimento\": \"1999-12-20\",\r\n        \"descricao\": \"vacinado\",\r\n        \"genero\": \"M\",\r\n        \"pessoa\": {\r\n            \"id\": \"eb67e906-b249-4807-9f48-062afb1d587d\",\r\n            \"nome\": \"Thalysson de Souza Guedin\",\r\n            \"dataNascimento\": \"1999-12-22\",\r\n            \"cpf\": \"226.819.381-04\",\r\n            \"genero\": \"M\",\r\n            \"telefone\": \"(48)3011-8266\"\r\n        }\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -337,38 +315,16 @@
 						"method": "PUT",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "nome",
-									"value": "Pitolomeu",
-									"type": "text"
-								},
-								{
-									"key": "dataNascimento",
-									"value": "1999-12-20",
-									"type": "text"
-								},
-								{
-									"key": "descricao",
-									"value": "vacinado",
-									"type": "text"
-								},
-								{
-									"key": "genero",
-									"value": "M",
-									"type": "text"
-								},
-								{
-									"key": "id",
-									"value": "aa581ab9-8dbf-41bf-b540-ea01ee2190c7",
-									"type": "text",
-									"disabled": true
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": \"1999-12-20 13:00\",\r\n    \"valor\": 0,\r\n    \"pago\": false,\r\n    \"funcionario\" :{\r\n        \"id\": \"7922bc0d-d2db-46ba-ab6b-ebd5e774aa30\",\r\n        \"salario\": \"1500\",\r\n        \"funcao\": \"recepcao\",\r\n        \"pessoa\": {\r\n            \"id\": \"eb67e906-b249-4807-9f48-062afb1d587d\",\r\n            \"nome\": \"Thalysson de Souza Guedin\",\r\n            \"dataNascimento\": \"1999-12-22\",\r\n            \"cpf\": \"226.819.381-04\",\r\n            \"genero\": \"M\",\r\n            \"telefone\": \"(48)3011-8266\"\r\n        }\r\n    },\r\n    \"animal\": {\r\n        \"id\": \"79bc5822-1f26-42c8-9912-389d2b51611d\",\r\n        \"nome\": \"Pitolomeu\",\r\n        \"dataNascimento\": \"1999-12-20\",\r\n        \"descricao\": \"vacinado\",\r\n        \"genero\": \"M\",\r\n        \"pessoa\": {\r\n            \"id\": \"eb67e906-b249-4807-9f48-062afb1d587d\",\r\n            \"nome\": \"Thalysson de Souza Guedin\",\r\n            \"dataNascimento\": \"1999-12-22\",\r\n            \"cpf\": \"226.819.381-04\",\r\n            \"genero\": \"M\",\r\n            \"telefone\": \"(48)3011-8266\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
+							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/atendimentos/{id}",
+							"raw": "http://localhost:3000/atendimentos/c945fdea-0aba-40c0-a80a-0793cf17a91d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -376,7 +332,7 @@
 							"port": "3000",
 							"path": [
 								"atendimentos",
-								"{id}"
+								"c945fdea-0aba-40c0-a80a-0793cf17a91d"
 							]
 						}
 					},
@@ -394,7 +350,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"salario\": 1500.00,\r\n    \"funcao\": \"recepcao\"\r\n}",
+							"raw": "{\r\n    \"salario\": 1500.00,\r\n    \"funcao\": \"recepcao\",\r\n    \"pessoa\": {\r\n        \"id\": \"eb67e906-b249-4807-9f48-062afb1d587d\",\r\n        \"nome\": \"Thalysson de Souza Guedin\",\r\n        \"cpf\": \"226.819.381-04\",\r\n        \"dataNascimento\": \"1999-12-22\",\r\n        \"genero\": \"M\",\r\n        \"telefone\": \"(48)3011-8266\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -461,10 +417,15 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"salario\": 1550.00,\r\n    \"funcao\": \"recepcao\"\r\n}"
+							"raw": "{\r\n    \"salario\": 1500.00,\r\n    \"funcao\": \"recepcao 2\",\r\n    \"pessoa\": {\r\n        \"id\": \"eb67e906-b249-4807-9f48-062afb1d587d\",\r\n        \"nome\": \"Thalysson de Souza Guedin\",\r\n        \"cpf\": \"226.819.381-04\",\r\n        \"dataNascimento\": \"1999-12-22\",\r\n        \"genero\": \"M\",\r\n        \"telefone\": \"(48)3011-8266\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/funcionarios/9895e96d-e9de-4447-aa69-8c3fdf7f5ef2",
+							"raw": "http://localhost:3000/funcionarios/7922bc0d-d2db-46ba-ab6b-ebd5e774aa30",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -472,7 +433,7 @@
 							"port": "3000",
 							"path": [
 								"funcionarios",
-								"9895e96d-e9de-4447-aa69-8c3fdf7f5ef2"
+								"7922bc0d-d2db-46ba-ab6b-ebd5e774aa30"
 							]
 						}
 					},
@@ -640,43 +601,16 @@
 						"method": "PUT",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "nome",
-									"value": "Thalysson de Souza Guedin 2",
-									"type": "text"
-								},
-								{
-									"key": "cpf",
-									"value": "226.819.381-04",
-									"type": "text"
-								},
-								{
-									"key": "dataNascimento",
-									"value": "1999-12-22",
-									"type": "text"
-								},
-								{
-									"key": "genero",
-									"value": "M",
-									"type": "text"
-								},
-								{
-									"key": "telefone",
-									"value": "(48)3011-8266",
-									"type": "text"
-								},
-								{
-									"key": "id",
-									"value": "aa581ab9-8dbf-41bf-b540-ea01ee2190c7",
-									"type": "text",
-									"disabled": true
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Thalysson de Souza Guedin 2\",\r\n    \"cpf\": \"226.819.381-04\",\r\n    \"dataNascimento\": \"1999-12-22\",\r\n    \"genero\": \"M\",\r\n    \"telefone\": \"(48)3011-8266\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
+							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/pessoas/aa581ab9-8dbf-41bf-b540-ea01ee2190c7",
+							"raw": "http://localhost:3000/pessoas/eb67e906-b249-4807-9f48-062afb1d587d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -684,7 +618,7 @@
 							"port": "3000",
 							"path": [
 								"pessoas",
-								"aa581ab9-8dbf-41bf-b540-ea01ee2190c7"
+								"eb67e906-b249-4807-9f48-062afb1d587d"
 							]
 						}
 					},
