@@ -1,0 +1,696 @@
+{
+	"info": {
+		"_postman_id": "69faba3f-513a-450a-8891-b7e1b11371e8",
+		"name": "ClinicaVeterinaria_V01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15562519"
+	},
+	"item": [
+		{
+			"name": "Animal",
+			"item": [
+				{
+					"name": "Adicionar Animal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Pitolomeu\",\r\n    \"dataNascimento\": \"1999-12-20\",\r\n    \"descricao\": \"vacinado\",\r\n    \"genero\": \"M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1ª- Nome inválido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Pitolomeu teste\",\r\n    \"dataNascimento\": \"2000-12-20\",\r\n    \"descricao\": \"vacinado\",\r\n    \"genero\": \"M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2ª- Data acima da atual",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Pitolomeu\",\r\n    \"dataNascimento\": \"2042-12-20\",\r\n    \"descricao\": \"vacinado\",\r\n    \"genero\": \"M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Animais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Animal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/animais/dcac72ae-9b96-434b-bfd2-e9d6d01aa330",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animais",
+								"dcac72ae-9b96-434b-bfd2-e9d6d01aa330"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Animal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Pitolomeu",
+									"type": "text"
+								},
+								{
+									"key": "dataNascimento",
+									"value": "1999-12-20",
+									"type": "text"
+								},
+								{
+									"key": "descricao",
+									"value": "vacinado",
+									"type": "text"
+								},
+								{
+									"key": "genero",
+									"value": "M",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "aa581ab9-8dbf-41bf-b540-ea01ee2190c7",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/animal/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animal",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Atendimento",
+			"item": [
+				{
+					"name": "Adicionar Atendimento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"data\": \"1999-12-20 13:00\",\r\n    \"valor\": 0,\r\n    \"pago\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/atendimentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"atendimentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1ª- Valor inválido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": \"1999-12-20 13:00\",\r\n    \"valor\": -90,\r\n    \"pago\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/atendimentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"atendimentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3ª- Data de atendimento maior que a atual",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": \"2042-12-20 13:00\",\r\n    \"valor\": 50,\r\n    \"pago\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/atendimentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"atendimentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Atendimentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/atendimentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"atendimentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Atendimento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/atendimentos/c945fdea-0aba-40c0-a80a-0793cf17a91d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"atendimentos",
+								"c945fdea-0aba-40c0-a80a-0793cf17a91d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2ª- Não é possível deletar pois tem valor ou foi pago",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/atendimentos/c945fdea-0aba-40c0-a80a-0793cf17a91d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"atendimentos",
+								"c945fdea-0aba-40c0-a80a-0793cf17a91d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Atendimento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Pitolomeu",
+									"type": "text"
+								},
+								{
+									"key": "dataNascimento",
+									"value": "1999-12-20",
+									"type": "text"
+								},
+								{
+									"key": "descricao",
+									"value": "vacinado",
+									"type": "text"
+								},
+								{
+									"key": "genero",
+									"value": "M",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "aa581ab9-8dbf-41bf-b540-ea01ee2190c7",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/atendimentos/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"atendimentos",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Funcionario",
+			"item": [
+				{
+					"name": "Adicionar Funcionario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"salario\": 1500.00,\r\n    \"funcao\": \"recepcao\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/funcionarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Funcionarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/funcionarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Funcionario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/funcionarios/9895e96d-e9de-4447-aa69-8c3fdf7f5ef2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios",
+								"9895e96d-e9de-4447-aa69-8c3fdf7f5ef2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Funcionario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"salario\": 1550.00,\r\n    \"funcao\": \"recepcao\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/funcionarios/9895e96d-e9de-4447-aa69-8c3fdf7f5ef2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"funcionarios",
+								"9895e96d-e9de-4447-aa69-8c3fdf7f5ef2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pessoa",
+			"item": [
+				{
+					"name": "Adicionar Pessoa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Thalysson de Souza Guedin\",\r\n    \"cpf\": \"226.819.381-04\",\r\n    \"dataNascimento\": \"1999-12-22\",\r\n    \"genero\": \"M\",\r\n    \"telefone\": \"(48)3011-8266\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1ª- CPF Inválido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Thalysson de Souza Guedin\",\r\n  \"cpf\": \"11111111111\",\r\n  \"dataNascimento\": \"1999-12-22\",\r\n  \"genero\": \"M\",\r\n  \"telefone\": \"(48)3011-8266\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2ª- Data acima da atual",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Thalysson de Souza Guedin\",\r\n  \"cpf\": \"38524932937\",\r\n  \"dataNascimento\": \"2023-07-25\",\r\n  \"genero\": \"M\",\r\n  \"telefone\": \"(48)3011-8266\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3ª- Nome inválido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Thalysson de tEste Guedin\",\r\n  \"cpf\": \"38524932937\",\r\n  \"dataNascimento\": \"1999-12-22\",\r\n  \"genero\": \"M\",\r\n  \"telefone\": \"(48)3011-8266\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Pessoas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Pessoa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pessoas/aa581ab9-8dbf-41bf-b540-ea01ee2190c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"aa581ab9-8dbf-41bf-b540-ea01ee2190c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Pessoa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Thalysson de Souza Guedin 2",
+									"type": "text"
+								},
+								{
+									"key": "cpf",
+									"value": "226.819.381-04",
+									"type": "text"
+								},
+								{
+									"key": "dataNascimento",
+									"value": "1999-12-22",
+									"type": "text"
+								},
+								{
+									"key": "genero",
+									"value": "M",
+									"type": "text"
+								},
+								{
+									"key": "telefone",
+									"value": "(48)3011-8266",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "aa581ab9-8dbf-41bf-b540-ea01ee2190c7",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/pessoas/aa581ab9-8dbf-41bf-b540-ea01ee2190c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pessoas",
+								"aa581ab9-8dbf-41bf-b540-ea01ee2190c7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

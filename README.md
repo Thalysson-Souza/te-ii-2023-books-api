@@ -1,18 +1,18 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://i.pinimg.com/originals/6e/58/56/6e5856abe2b9da38b2180ee478c70f2d.jpg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[circleci-image]: https://i.pinimg.com/originals/6e/58/56/6e5856abe2b9da38b2180ee478c70f2d.jpg
+[circleci-url]: https://i.pinimg.com/originals/6e/58/56/6e5856abe2b9da38b2180ee478c70f2d.jpg
 
-<p align="center">Aplicação backend desenvolvida para a disciplina de Tópicos Especiais 2</p>
+<p align="center">Aplicação backend para Clínica Veterinária</p>
 <p align="center">
   <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 </p>
 
-## Description
+## Descrição
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Aplicação backend desenvolvida para a disciplina de Tópicos Especiais 2
 
 ## Instalação
 
@@ -21,6 +21,8 @@ $ npm run typeorm:run
 ```
 
 ## Iniciar aplicação
+
+Lembrar de alterar as conexões de banco conforme a necessidade.
 
 ```bash
 # development
@@ -33,11 +35,17 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Swagger
+Link para acesso ao [Swagger](http://localhost:3000/api)
+## Postman
+Link para acesso ao [Postman](./Json//ClinicaVeterinaria_V01.postman_collection.json)
+
 ## Equipe
 
-- Author - [Thalysson de Souza Guedin](https://github.com/Thalysson-Souza)
-- Author - [Ana Julia Medeiros Marcelino](https://nestjs.com/)
+- Autor(a) - [Thalysson de Souza Guedin](https://github.com/Thalysson-Souza)
+- Autror(a) - [Ana Julia Medeiros Marcelino](https://nestjs.com/)
 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+****
