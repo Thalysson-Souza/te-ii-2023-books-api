@@ -43,7 +43,7 @@ Link para acesso ao [Postman](./Json//ClinicaVeterinaria_V01.postman_collection.
 ## Equipe
 
 - Autor(a) - [Thalysson de Souza Guedin](https://github.com/Thalysson-Souza)
-- Autror(a) - [Ana Julia Medeiros Marcelino](https://nestjs.com/)
+- Autror(a) - [Ana Julia Medeiros Marcelino](https://github.com/AnaJuliaMed/)
 
 ## License
 
