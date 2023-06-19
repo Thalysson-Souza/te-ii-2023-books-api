@@ -1,13 +1,11 @@
+import { AnimalEntity } from 'src/animal/animal.entity';
 import {
   Column,
   Entity,
-  ManyToOne,
   OneToMany,
   PrimaryGeneratedColumn
 } from 'typeorm';
 import { GeneroEnum } from './genero.enum';
-import { AnimalEntity } from 'src/animal/animal.entity';
-import { AtendimentoEntity } from 'src/atendimento/atendimento.entity';
 
 @Entity({ name: 'pessoas' })
 export class PessoaEntity {

@@ -1,3 +1,5 @@
+import { AtendimentoEntity } from 'src/atendimento/atendimento.entity';
+import { PessoaEntity } from 'src/pessoa/pessoa.entity';
 import {
   Column,
   Entity,
@@ -6,11 +8,9 @@ import {
   OneToMany,
   PrimaryGeneratedColumn
 } from 'typeorm';
-import { GeneroEnum } from './genero.enum';
-import { PessoaEntity } from 'src/pessoa/pessoa.entity';
-import { AtendimentoEntity } from 'src/atendimento/atendimento.entity';
+import { GeneroEnumA } from './generoA.enum';
 
-@Entity({ name: 'pessoas' })
+@Entity({ name: 'animais' })
 export class AnimalEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -26,10 +26,10 @@ export class AnimalEntity {
 
   @Column({
     type: 'enum',
-    enum: GeneroEnum,
-    default: GeneroEnum.INDEFINIDO,
+    enum: GeneroEnumA,
+    default: GeneroEnumA.INDEFINIDO,
   })
-  genero: GeneroEnum;
+  genero: GeneroEnumA;
 
   @ManyToOne(
     () => PessoaEntity,

@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { FuncionarioEntity } from './funcionario.entity';
 import { FuncionarioDto } from './funcionario.dto';
+import { FuncionarioService } from './funcionario.service';
 
 @Controller('funcionarios')
 export class FuncionarioController {

@@ -7,7 +7,7 @@ import {
   IsUUID,
   ValidateNested
 } from 'class-validator';
-import { GeneroEnum } from './genero.enum';
+import { GeneroEnumA } from './generoA.enum';
 import { Type } from 'class-transformer';
 import { PessoaDto } from 'src/pessoa/pessoa.dto';
 
@@ -31,7 +31,7 @@ export class AnimalDto {
   @IsOptional()
   descricao: string;
 
-  @IsEnum(GeneroEnum)
-  genero?: GeneroEnum;
+  @IsEnum(GeneroEnumA)
+  genero?: GeneroEnumA;
 
 }
