@@ -7,6 +7,7 @@ import { PessoaModule } from './pessoa/pessoa.module';
 import { FuncionarioModule } from './funcionario/funcionario.module';
 import { AnimalModule } from './animal/animal.module';
 import { AtendimentoModule } from './atendimento/atendimento.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @Module({
   imports: [
@@ -14,7 +15,8 @@ import { AtendimentoModule } from './atendimento/atendimento.module';
     PessoaModule,
     FuncionarioModule,
     AnimalModule,
-    AtendimentoModule
+    AtendimentoModule,
+    DashboardModule
   ],
   controllers: [AppController],
   providers: [AppService],
